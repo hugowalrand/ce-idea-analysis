@@ -582,7 +582,7 @@ def show_detailed_explorer():
         text=transition_pct,
         texttemplate="%{text:.1f}%",
         textfont={"size": 10},
-        hoverontemplate='Initial: %{y}<br>Final: %{x}<br>Probability: %{z:.1f}%<extra></extra>'
+        hovertemplate='Initial: %{y}<br>Final: %{x}<br>Probability: %{z:.1f}%<extra></extra>'
     ))
     
     fig.update_layout(
