@@ -2,7 +2,7 @@
 
 ## Interactive Dashboard for Preference Evolution Research
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/your-username/ce-analysis)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hugowalrand-ce-idea-analysis.streamlit.app/)
 
 This repository contains a comprehensive analysis of how participant preferences for charitable ideas evolve during CE programs, presented through a professional interactive dashboard.
 
@@ -15,7 +15,7 @@ This repository contains a comprehensive analysis of how participant preferences
 
 ## 🚀 Live Dashboard
 
-**[🌐 Access the Interactive Dashboard →](https://share.streamlit.io/your-username/ce-analysis)**
+**[🌐 Access the Interactive Dashboard →](https://hugowalrand-ce-idea-analysis.streamlit.app/)**
 
 The dashboard includes:
 - **Executive Summary** - Perfect for newcomers and stakeholders
