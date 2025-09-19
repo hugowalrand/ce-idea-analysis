@@ -624,15 +624,29 @@ def show_detailed_explorer():
         # Correlation analysis
         correlation = np.corrcoef(df['first_rating'], df['change'])[0, 1]
         
+        # Create scatter plot without trendline to avoid statsmodels dependency
         fig = px.scatter(
             df,
             x='first_rating',
-            y='change', 
+            y='change',
             color='abs_change',
             size='abs_change',
-            title=f"Predictive Pattern Analysis (r = {correlation:.3f})",
-            trendline="ols"
+            title=f"Predictive Pattern Analysis (r = {correlation:.3f})"
         )
+
+        # Add manual trendline using numpy polyfit
+        if len(df) > 1:
+            x_vals = df['first_rating']
+            y_vals = df['change']
+            z = np.polyfit(x_vals, y_vals, 1)
+            p = np.poly1d(z)
+            fig.add_scatter(
+                x=sorted(x_vals),
+                y=p(sorted(x_vals)),
+                mode='lines',
+                name=f'Trendline (slope: {z[0]:.3f})',
+                line=dict(color='red', dash='dash')
+            )
         
         fig.update_layout(
             xaxis_title="Initial Rating",
